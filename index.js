@@ -1,7 +1,12 @@
-import {Schema, Route} from './Common';
-import TabBar from './TabBar';
-import Actions from './Actions';
-import Router from './ReactRouter';
-import Animations from './Animations';
+import Router from './src/Router';
+import Scene from './src/Scene';
+import Schema from './src/Schema';
+import Actions from './src/Actions';
+import getInitialState from './src/State';
+import Reducer from './src/Reducer';
+import TabBar from './src/TabBar';
+import Modal from './src/Modal';
+import DefaultRenderer from './src/DefaultRenderer';
+import Switch from './src/Switch';
 
-module.exports = {Schema, Route, TabBar, Actions, Router, Animations};
+module.exports = {DefaultRenderer, Switch, Schema, Modal, Router, TabBar, Scene, Actions, Reducer, getInitialState};

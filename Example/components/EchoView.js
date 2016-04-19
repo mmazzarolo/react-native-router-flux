@@ -9,11 +9,6 @@ const styles = StyleSheet.create({
         alignItems: "center",
         backgroundColor: "#F5FCFF",
     },
-    welcome: {
-        fontSize: 20,
-        textAlign: "center",
-        margin: 10,
-    },
     instructions: {
         textAlign: "center",
         color: "#333333",
@@ -21,14 +16,17 @@ const styles = StyleSheet.create({
     },
 });
 
+
 export default class extends React.Component {
     render(){
         return (
-            <View style={styles.container}>
-                <Text>Register page</Text>
-                <Button onPress={Actions.home}>Replace screen</Button>
-                <Button onPress={Actions.pop}>Back</Button>
+            <View style={[styles.container, this.props.sceneStyle]}>
+                <Text style={styles.instructions}>key: {this.props.navigationState.key}</Text>
+                <Text style={styles.instructions}>sceneKey: {this.props.navigationState.sceneKey}</Text>
+                <Button onPress={Actions.echo}>push new scene</Button>
+                <Button onPress={Actions.pop}>pop</Button>
             </View>
         );
     }
 }
+
